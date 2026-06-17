@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Trang-1" id="lYGf_pug4EzrTTdNROrQ">
+    <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fV-jP-osZbmRwWUtVG3P-3" edge="1" parent="1" source="Gr2ZTuXNdxlaTny2nzJJ-1" style="endArrow=classic;html=1;rounded=0;entryX=1.008;entryY=0.816;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.098;exitY=0.791;exitDx=0;exitDy=0;exitPerimeter=0;" target="Gr2ZTuXNdxlaTny2nzJJ-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="300" as="sourcePoint" />
+            <mxPoint x="390" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fV-jP-osZbmRwWUtVG3P-4" connectable="0" parent="fV-jP-osZbmRwWUtVG3P-3" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="Registration results&lt;div&gt;Class schedule&lt;/div&gt;&lt;div&gt;System feedback&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gr2ZTuXNdxlaTny2nzJJ-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="0.0&lt;div&gt;Course Registration System&lt;/div&gt;" vertex="1">
+          <mxGeometry height="124" width="124" x="580" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Gr2ZTuXNdxlaTny2nzJJ-2" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Student" vertex="1">
+          <mxGeometry height="112" width="80" x="200" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="Gr2ZTuXNdxlaTny2nzJJ-3" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Admin" vertex="1">
+          <mxGeometry height="112" width="80" x="990" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="fV-jP-osZbmRwWUtVG3P-1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.029;entryY=0.326;entryDx=0;entryDy=0;entryPerimeter=0;" target="Gr2ZTuXNdxlaTny2nzJJ-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="240" as="sourcePoint" />
+            <mxPoint x="380" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fV-jP-osZbmRwWUtVG3P-2" connectable="0" parent="fV-jP-osZbmRwWUtVG3P-1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="Sign in/Logout&lt;div&gt;Login &amp;amp; Security&lt;br&gt;Register/Cancel request&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fV-jP-osZbmRwWUtVG3P-6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.964;entryY=0.326;entryDx=0;entryDy=0;entryPerimeter=0;" target="Gr2ZTuXNdxlaTny2nzJJ-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990" y="240" as="sourcePoint" />
+            <mxPoint x="890" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fV-jP-osZbmRwWUtVG3P-7" connectable="0" parent="fV-jP-osZbmRwWUtVG3P-6" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="Personal information management&lt;div&gt;Class configuration&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fV-jP-osZbmRwWUtVG3P-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.839;entryDx=0;entryDy=0;entryPerimeter=0;" target="Gr2ZTuXNdxlaTny2nzJJ-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="300" as="sourcePoint" />
+            <mxPoint x="790" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fV-jP-osZbmRwWUtVG3P-9" connectable="0" parent="fV-jP-osZbmRwWUtVG3P-8" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="Report" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
