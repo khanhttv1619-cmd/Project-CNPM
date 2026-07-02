@@ -59,7 +59,7 @@ DB_CONFIG = {
 def setup_database():
     try:
         conn = mysql.connector.connect(**DB_CONFIG) # tạo kết nối đến database, ** dùng để lấy value từ config
-        cursor = conn.cursor()
+        cursor = conn.cursor() # mang câu lệnh python đến database
         cursor.execute("CREATE DATABASE IF NOT EXISTS CourseRegDB")
         cursor.execute("USE CourseRegDB")
         
@@ -88,10 +88,10 @@ def setup_database():
             FOREIGN KEY (sectionCode) REFERENCES ClassSection(sectionCode) ON DELETE CASCADE)""")
 
         cursor.execute("SELECT COUNT(*) FROM User")
-        if cursor.fetchone()[0] == 0:
-            cursor.execute("INSERT INTO User (userName, password, role) VALUES ('admin@ut.edu.vn', 'admin123', 'admin')")
+        if cursor.fetchone()[0] == 0: # kết quả trả về là tuple (vd: (5, )), fetchone dùng để lấy dòng kết quả đầu tiên
+            cursor.execute("INSERT INTO User (userName, password, role) VALUES ('admin@ut.edu.vn', 'admin123', 'admin')") # khởi tạo giá trị mặc định nếu bảng rỗng
             cursor.execute("INSERT INTO User (userName, password, role) VALUES ('2251120001', '123456', 'student')")
-            uid = cursor.lastrowid
+            uid = cursor.lastrowid # lấy id của auto_increament để chèn vào cho student mới
             cursor.execute("INSERT INTO Student (studentID, userID, studentName, email, phone, gender, birthdate, major, className) VALUES ('2251120001', %s, 'Trần Nguyễn Minh An', 'antn0001@ut.edu.vn', '0901000001', 'Nam', '2005-03-14', 'Cong nghe phan mem', 'CNPM01')", (uid,))
             
             courses = [('AI101', 'Tri tue nhan tao nhap mon', 3, 520000, 'CS102, MATH101'), ('CS101', 'Nhap mon lap trinh', 3, 450000, 'Khong'), ('CS102', 'Cau truc du lieu', 3, 450000, 'CS101'), ('MATH101', 'Toan roi rac', 3, 450000, 'Khong'), ('ENG101', 'Tieng Anh chuyen nganh CNTT', 2, 380000, 'Khong')]
@@ -129,18 +129,18 @@ class CourseRegApp(ctk.CTk):
         self.frames = {}
         # Khởi tạo tất cả các màn hình
         for F in (LoginFrame, ForgotPasswordFrame, DashboardFrame, AdminDashboardFrame):
-            frame = F(parent=self.container, controller=self)
+            frame = F(parent=self.container, controller=self) # controller là bộ đàm để lấy thông tin các hàm trong class chính
             self.frames[F] = frame
-            frame.grid(row=0, column=0, sticky="nsew")
+            frame.grid(row=0, column=0, sticky="nsew") # sticky="nsew": kéo ra sát viền sân khấu
         self.container.grid_rowconfigure(0, weight=1)
-        self.container.grid_columnconfigure(0, weight=1)
+        self.container.grid_columnconfigure(0, weight=1) # có thể kéo dãn cửa sổ
 
-        self.show_frame(LoginFrame)
+        self.show_frame(LoginFrame) # gọi hàm show_frame cho login lên đầu
 
     def show_frame(self, cont):
         frame = self.frames[cont]
-        frame.tkraise()
-        if hasattr(frame, 'update_data'):
+        frame.tkraise() # kéo cửa sổ này lên trên cùng
+        if hasattr(frame, 'update_data'): # hỏi màn hình này có hàm update data để refresh không
             frame.update_data()
 
     def get_db_connection(self):
