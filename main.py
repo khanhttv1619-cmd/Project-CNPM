@@ -53,7 +53,7 @@ def check_schedule_conflict(sched1, sched2):
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'Cuong0352859320%%%' # Mật khẩu của bạn
+    'password': '12345678' # Mật khẩu của bạn
 }
 
 def setup_database():
