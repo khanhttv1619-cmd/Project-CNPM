@@ -58,7 +58,7 @@ DB_CONFIG = {
 
 def setup_database():
     try:
-        conn = mysql.connector.connect(**DB_CONFIG)
+        conn = mysql.connector.connect(**DB_CONFIG) # tạo kết nối đến database, ** dùng để lấy value từ config
         cursor = conn.cursor()
         cursor.execute("CREATE DATABASE IF NOT EXISTS CourseRegDB")
         cursor.execute("USE CourseRegDB")
